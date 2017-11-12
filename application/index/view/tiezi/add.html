@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form method="post" action="/tiezi/adddo">
+    <fieldset>
+        <legend>新建帖子</legend>
+        <p>
+            <label for="tititle">标题：</label>
+            <input type="text" id="tititle" name="tititle" placeholder="请输入标题！......"/>
+        </p>
+        <p>
+            <label for="tiecontent">内容：</label>
+            <textarea rows="10" cols="30" id="tiecontent" name="tiecontent" placeholder="请输入帖子的内容！......"></textarea>
+        </p>
+        <p>
+            <input type="hidden" name="baid" value={$list.ba_id}>
+        </p>
+        <p>
+            <input type="hidden" name="ptie" value=0 />
+        </p>
+        <p>
+            <input type="hidden" name="quotetie" value=0 />
+        </p>
+        <p>
+            <input type="submit" value="新建" />
+        </p>
+
+    </fieldset>
+</form>
+</body>
+</html>

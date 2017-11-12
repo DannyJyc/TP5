@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<tr>
+    <td><font size="10">帖子首页</font></td>
+	{if condition="$lists.power == 2"}
+	<font color=red>当前是管理员模式</font><br>
+	用户名：{$Request.session.username}<br>
+	密码：{$Request.session.password}
+	<a href="/log/logout">注销</a>
+	{else/}
+	用户名：{$Request.session.username}<br>
+	密码：{$Request.session.password}
+	<a href="/log/logout">注销</a>
+	{/if}
+</tr>
+             
+<div>
+	<ul>
+ 		{volist name="list" id="tiezi"}
+			<li><a href="/tie/tiecontent/{$tiezi.tieid}"><font color=blue>{$tiezi.tititle}</font></a><font color=yellow>{$tiezi.tiedate}</font></li>	
+			{if condition="$lists.power == 2"}
+			<td><font size="5"><a href="/tie/add/{$tiezi.ba_id}">新增帖子</a></font></td>
+			{else/}
+			<h><font color=green>您无权限新增帖子！<font></h>
+			{/if}
+		{/volist}
+	</ul>
+</div>
+</body>
+</html>

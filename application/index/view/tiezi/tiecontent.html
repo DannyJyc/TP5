@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+    .outer {
+        padding: 10px;
+        width: 600px;
+        height: 250px;
+        border: solid 3px #19eaaf;
+    }
+</style>
+</head>
+<body>
+	
+	<ul>
+	{volist name="list" id="tiecontent"}
+	<div class="outer">
+	{$tiecontent.tititle}
+		
+		<li>{$tiecontent.tiecontent}</li>{$tiecontent.tiedate}	
+		<a href="/tie/huifu/{$tiecontent.tieid}">回复</a>
+		{if condition="$tiecontent.ptie > 0"}
+			<a href="/tie/list/{$tiecontent.ptie}/{$tiecontent.tieid}">查看回复......</a>
+		{/if}
+	</div>
+	{/volist}
+	</ul>
+</body>
+</html>

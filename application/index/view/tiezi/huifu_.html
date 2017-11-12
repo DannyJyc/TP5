@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form method="post" action="/tiezi/huifudo">
+	    <p>
+            <textarea rows="10" cols="30" id="tiecontent" name="tiecontent" placeholder="请输入回复的内容！......"></textarea>
+        </p>
+        <p>
+            <input type="hidden" name="baid" value={$select.ba_id}>
+        </p>
+        <p>
+            <input type="hidden" name="tieid" value={$select.tieid}>
+        </p>
+        <p>
+            <input type="submit" name="buttonSubmit" value="确认回复" />
+        </p>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form method="post" action="/log/login">
+	    <p>
+            <label for="username">用户名:</label>
+            <input type="text" id="username" name="username"/>
+        </p>
+        <p>
+            <label for="password">密码：</label>
+            <input type="text" id="password" name="password"/>
+        </p>
+        <p>
+            <laber for="power">权限</laber>
+            <select name="power" id="power">
+                <option value="1">普通用户</option>
+                <option value="2">管理员</option>
+            </select><br>
+        </p>
+        <p>
+        	<input type="submit" value="注册">
+        </p>
+	</form>
+</body>
+</html>

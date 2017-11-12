@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<tr>
+    <td><font size="10">贴吧</font></td><br>
+</tr>
+	{if condition="$lists.power == 2"}
+	<font color=red>当前是管理员模式</font><br>
+	用户名：{$Request.session.username}<br>
+	密码：{$Request.session.password}
+	<a href="/log/logout">注销</a>
+	{else/}
+	用户名：{$Request.session.username}<br>
+	密码：{$Request.session.password}
+	<a href="/log/logout">注销</a>
+	{/if}
+<body>
+	<ul>
+ 		{volist name="list" id="ba"}
+            <li><a href="/tie/index/{$ba.id}/{$Request.session.username}/{$Request.session.password}">{$ba.batitle}</a></li>
+		{/volist}
+	</ul>
+</body>
+</html>

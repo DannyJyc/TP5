@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	{if condition="$list.power == 2"}
+	<font color=red>当前是管理员模式</font><br>
+	用户名：{$Request.session.username}<br>
+	密码：{$Request.session.password}
+	<a href="/log/logout">注销</a>
+	{else/}
+	用户名：{$Request.session.username}<br>
+	密码：{$Request.session.password}
+	<a href="/log/logout">注销</a>
+	{/if}
+</body>
+</html>
